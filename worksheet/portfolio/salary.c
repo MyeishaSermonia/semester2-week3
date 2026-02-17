@@ -26,11 +26,11 @@
 
 
    // Use only these print statement with appropriate formatting and variable names
-   //printf("Salary £...",var_name);
+   printf("Salary £%.2f\n", salary);
     
-    printf("NI contribution £%.2f\n", NI_cont);
-    printf("Tax contribution £%.2f\n", tax_cont);
-    printf("Take home salary £%.2f\n", take_home_sal);
+   printf("NI contribution £%.2f\n", NI_cont);
+   printf("Tax contribution £%.2f\n", tax_cont);
+   printf("Take home salary £%.2f\n", take_home_sal);
 
-    return 0;
+   return 0;
  }
