@@ -3,21 +3,34 @@
 
 /*
  * Potrfolio submission
- * Name:
- * ID:
+ * Name: Johann Myeisha Sermonia
+ * ID: 201865495
  */
 
  int main( void ) {
+   // define and initialise variables for the problem data 
+   float salary = 36250;
+   float NI_rate = 8;
+   float tax_rate = 15;
 
-    // define and initialise variables for the problem data 
+   // calculate the deductions and final take-home salary
+   float NI_cont = salary * (NI_rate/100);
+   float sal_aft_NI = salary - NI_cont;
+   float tax_cont = 0;
 
-    // calculate the deductions and final take-home salary
+   if (sal_aft_NI > 12500) {
+      float tax_amount = sal_aft_NI - 12500;
+      tax_cont = tax_amount * (tax_rate/100);
+   }
+   float take_home_sal = sal_aft_NI - tax_cont;  
 
-    // Use only these print statement with appropriate formatting and variable names
-    //printf("Salary £...",var_name);
-    //printf("NI contribution £...",var_name);
-    //printf("Tax contribution £...",var_name);
-    //printf("Take home salary £...",var_name);
+
+   // Use only these print statement with appropriate formatting and variable names
+   //printf("Salary £...",var_name);
+    
+    printf("NI contribution £%.2f\n", NI_cont);
+    printf("Tax contribution £%.2f\n", tax_cont);
+    printf("Take home salary £%.2f\n", take_home_sal);
 
     return 0;
  }
